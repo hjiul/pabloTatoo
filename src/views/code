@@ -1,0 +1,29 @@
+ 
+ <v-card class="overflow-hidden">
+ <v-sheet
+      id="scrolling-techniques-5"
+      class="overflow-y-auto"
+      max-height="700"
+    >
+      <v-container style="height: 1500px;">
+      </v-container>
+    </v-sheet>
+  </v-card> 
+
+
+      fade-img-on-scroll
+      scroll-target="#scrolling-techniques-5"
+      scroll-threshold="500"
+
+      shrink-on-scroll
+
+      <v-col v-for="image in slide.images" :key="image.id" :cols="12/(slide.images.length+1)">
+            <v-card elevation="11" class="ma-3 pa-3">
+              <v-card-title><h2>{{image.title}}</h2></v-card-title>
+              <v-card-subtitle><h3>{{image.caption}}</h3></v-card-subtitle>
+              <div><v-img :src="image.src" width="80%"></v-img></div>
+            </v-card>
+            
+            
+            
+          </v-col>
